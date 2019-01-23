@@ -1,0 +1,16 @@
+   @font-face {
+         font-family: "waker";
+         src: url('../../fonts/waker.TTF');
+         }
+ 
+   .waker {
+         font-family: "waker";
+         }
+            @font-face {
+         font-family: "kim";
+         src: url('../../fonts/kimberly/KGDancingOnTheRooftop.TTF');
+         }
+ 
+   .kim {
+         font-family: "kim";
+         }

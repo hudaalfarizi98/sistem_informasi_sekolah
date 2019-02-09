@@ -82,7 +82,7 @@ if(isset($_POST['log'])){
       header('location:profile_guru.php');
     }
     if($cek_rows['Level'] == '3'){
-      header('location:admin/dashboard.php');
+      header("location:admin/dashboard.php");
     }
   }
   else{

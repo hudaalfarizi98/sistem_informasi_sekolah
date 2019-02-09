@@ -111,7 +111,7 @@ if(isset($msg))
       </div>
 
       <div class="col-md-8">
-      <table class="table table-striped">
+      <table class="table table-striped table-hover">
         <tr>
           <td style="font:bold;"><b>Nama</b></td>
           <td>:</td>
@@ -182,7 +182,7 @@ if(isset($msg))
       </div>
       <div class="modal-body">
         <form method="POST">
-        <table class="table">
+        <table class="table table-hover">
           <tr>
             <td>Nama</td>
             <td>:</td>
@@ -191,12 +191,12 @@ if(isset($msg))
           <tr>
             <td>Kelas</td>
             <td>:</td>
-            <td><input class="form-control" type="text" name="kelas" value="<?php echo $data['Kelas'];?>"></td>
+            <td><input disabled="disabled" class="form-control" type="text" name="kelas" value="<?php echo $data['Kelas'];?>"></td>
           </tr>
           <tr>
             <td>Jurusan</td>
             <td>:</td>
-            <td><input class="form-control" type="text" name="jurusan" value="<?php echo $data['Jurusan'];?>"></td>
+            <td><input disabled="disabled" class="form-control" type="text" name="jurusan" value="<?php echo $data['Jurusan'];?>"></td>
           </tr>
           <tr>
             <td>No Telepon</td>

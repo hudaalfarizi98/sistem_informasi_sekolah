@@ -13,10 +13,10 @@ if(isset($_POST["operation"]))
 		$date = strtotime(date('y-m-d H:i:s'));
 		$result = $statement->execute(
 			array(
-				':Id'	=>	$_POST["Id"],
-				':IdGuru'	=>	$_POST["IdGuru"],
-				':NamaMapel' =>	$_POST["NamaMapel"],
-				':Kelas' => $_POST['Kelas']
+				':Id'	=>	htmlspecialchars($_POST["Id"]),
+				':IdGuru'	=>	htmlspecialchars($_POST["IdGuru"]),
+				':NamaMapel' =>	htmlspecialchars($_POST["NamaMapel"]),
+				':Kelas' => htmlspecialchars($_POST['Kelas'])
 			)
 		);
 		if(!empty($result))
@@ -31,10 +31,10 @@ $statement = $connection->prepare("
 		");
 		$result = $statement->execute(
 			array(
-				':Id'	=>	$_POST["Id"],
-				':IdGuru'	=>	$_POST["IdGuru"],
-				':NamaMapel' =>	$_POST["NamaMapel"],
-				':Kelas' => $_POST['Kelas']
+				':Id'	=>	htmlspecialchars($_POST["Id"]),
+				':IdGuru'	=>	htmlspecialchars($_POST["IdGuru"]),
+				':NamaMapel' =>	htmlspecialchars($_POST["NamaMapel"]),
+				':Kelas' => htmlspecialchars($_POST['Kelas'])
 			)
 		);
 		if(!empty($result))

@@ -12,8 +12,8 @@ $penulis = $_SESSION['username'];
 
 if(isset($_POST['update'])){
  $file = $_GET['id'];
- $mp = $_POST['mp'];
- $judul = $_POST['judul'];
+ $mp = htmlspecialchars($_POST['mp']);
+ $judul = htmlspecialchars($_POST['judul']);
  $content = $_POST['content'];
 
  $insert = $forward->updateMateri($file,$mp,$judul,$content,$penulis);

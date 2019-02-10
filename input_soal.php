@@ -16,32 +16,32 @@ if(isset($_POST['save_'])){
   $mp = $_POST['mp'];
 
   //get soal 
-  $soal =  $_POST['soal'];
+  $soal =  htmlspecialchars($_POST['soal']);
   $gambar_soal = $_FILES['gambar_soal']['name'];
   $suara_soal = $_FILES['suara_soal']['name'];
 
   //get jawaban a
-  $a = $_POST['a'];
+  $a = htmlspecialchars($_POST['a']);
   $gambar_a = $_FILES['gambar_a']['name'];
   $suara_a = $_FILES['suara_a']['name'];
 
   //get jawaban b
-  $b = $_POST['b'];
+  $b = htmlspecialchars($_POST['b']);
   $gambar_b = $_FILES['gambar_b']['name'];
   $suara_b = $_FILES['suara_b']['name'];
 
   //get jawaban c
-  $c = $_POST['c'];
+  $c = htmlspecialchars($_POST['c']);
   $gambar_c = $_FILES['gambar_c']['name'];
   $suara_c = $_FILES['suara_c']['name'];
 
   //get jawaban d
-  $d = $_POST['d'];
+  $d = htmlspecialchars($_POST['d']);
   $gambar_d = $_FILES['gambar_d']['name'];
   $suara_d = $_FILES['suara_d']['name'];
 
   //jawaban benar
-  $jwbn = $_POST['bnr'];
+  $jwbn = htmlspecialchars($_POST['bnr']);
 
   //soal file
   if(!empty($gambar_soal)){

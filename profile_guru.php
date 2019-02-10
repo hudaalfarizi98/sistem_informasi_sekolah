@@ -14,8 +14,8 @@ $data = $prof->getProfile($id);
 
 if(isset($_POST['update'])){
   $idmember = $_SESSION['IdMember'];
-  $nama     = $_POST['nama'];
-  $NoTlp    = $_POST['NoTlp'];
+  $nama     = htmlspecialchars($_POST['nama']);
+  $NoTlp    = htmlspecialchars($_POST['NoTlp']);
 
   $exec_edit = $prof->editProfile($idmember,$nama,$NoTlp);
 

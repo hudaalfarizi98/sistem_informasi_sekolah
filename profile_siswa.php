@@ -13,16 +13,16 @@ $data = $prof->getProfile($id);
 //Function UPdate
 
 if(isset($_POST['update'])){
-  $idmember = $_SESSION['IdMember'];
-  $nama     = $_POST['nama'];
-  $jurusan  = $_POST['jurusan'];
-  $kelas    = $_POST['kelas'];
-  $NoTlp    = $_POST['NoTlp'];
-  $alamat   = $_POST['alamat'];
-  $email    = $_POST['email'];
-  $namaayah = $_POST['namaayah'];
-  $namaibu  = $_POST['namaibu'];
-  $tgl      = $_POST['tgl'];
+  $idmember = htmlspecialchars($_SESSION['IdMember']);
+  $nama     = htmlspecialchars($_POST['nama']);
+  $jurusan  = htmlspecialchars($_POST['jurusan']);
+  $kelas    = htmlspecialchars($_POST['kelas']);
+  $NoTlp    = htmlspecialchars($_POST['NoTlp']);
+  $alamat   = htmlspecialchars($_POST['alamat']);
+  $email    = htmlspecialchars($_POST['email']);
+  $namaayah = htmlspecialchars($_POST['namaayah']);
+  $namaibu  = htmlspecialchars($_POST['namaibu']);
+  $tgl      = htmlspecialchars($_POST['tgl']);
 
   $exec_edit = $prof->editProfile($idmember,$nama,$jurusan,$kelas,$NoTlp,$alamat,$email,$namaayah,$namaibu,$tgl);
 

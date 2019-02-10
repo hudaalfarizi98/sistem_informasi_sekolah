@@ -13,10 +13,10 @@ if(isset($_POST["operation"]))
 		$date = strtotime(date('y-m-d H:i:s'));
 		$result = $statement->execute(
 			array(
-				':Id'	=>	$_POST["Id"].$date,
-				':Username'	=>	$_POST["Username"],
+				':Id'	=>	htmlspecialchars($_POST["Id"].$date),
+				':Username'	=>	htmlspecialchars($_POST["Username"]),
 				':Password'		=>	sha1($_POST["Password"]),
-				':Level' => $_POST['Level']
+				':Level' => htmlspecialchars($_POST['Level'])
 			)
 		);
 		if(!empty($result))
@@ -31,10 +31,10 @@ $statement = $connection->prepare("
 		");
 		$result = $statement->execute(
 			array(
-				':Id'	=>	$_POST["Id"],
-				':Username'	=>	$_POST["Username"],
+				':Id'	=>	htmlspecialchars($_POST["Id"]),
+				':Username'	=>	htmlspecialchars($_POST["Username"]),
 				':Password'		=>	sha1($_POST['Password']),
-				':Level' => $_POST['Level']
+				':Level' => htmlspecialchars($_POST['Level'])
 			)
 		);
 		if(!empty($result))

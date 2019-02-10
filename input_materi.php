@@ -10,8 +10,8 @@ $forward = new C_profile;
 $id = $_SESSION['IdMember'];
 
 if(isset($_POST['new_'])){
- $mp = $_POST['mp'];
- $judul = $_POST['judul'];
+ $mp = htmlspecialchars($_POST['mp']);
+ $judul = htmlspecialchars($_POST['judul']);
  $content = $_POST['content'];
 
  $insert = $forward->saveMateri($mp,$judul,$content,$id);

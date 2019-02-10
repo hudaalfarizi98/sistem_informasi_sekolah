@@ -23,7 +23,7 @@ require_once('template/header.php');
 	</li>
 	<li class="active">
 		<a href="MasterMapel.php">
-			<i class="fa fa-user"></i> <span>Master Mapel</span>
+			<i class="fa fa-book"></i> <span>Master Mapel</span>
 		</a>
 	</li>
 	<li class="header">SETTING</li>
@@ -70,19 +70,21 @@ require_once('template/header.php');
 					</div>
 
 					<div class="col-md-8">
-						<table id="user_data" class="ui celled table" style="width:100%">
-							<thead>
-								<tr>
-									<th>Id Mapel</th>
-									<th>Id Guru</th>
-									<th>Nama Mapel</th>
-									<th>Kelas</th>
-									<th>Edit</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
+						<div class="table-resposive">
+							<table id="user_data" class="ui celled table" style="width:100%">
+								<thead>
+									<tr>
+										<th>Id Mapel</th>
+										<th>Id Guru</th>
+										<th>Nama Mapel</th>
+										<th>Kelas</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
 
-						</table>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

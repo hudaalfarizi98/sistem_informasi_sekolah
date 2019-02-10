@@ -23,7 +23,7 @@ require_once('template/header.php');
 	</li>
 	<li class="">
 		<a href="MasterMapel.php">
-			<i class="fa fa-user"></i> <span>Master Mapel</span>
+			<i class="fa fa-book"></i> <span>Master Mapel</span>
 		</a>
 	</li>
 	<li class="header">SETTING</li>
@@ -70,18 +70,20 @@ require_once('template/header.php');
 					</div>
 
 					<div class="col-md-8">
-						<table id="user_data" class="ui celled table" style="width:100%">
-							<thead>
-								<tr>
-									<th>Id</th>
-									<th>Nama</th>
-									<th>Level</th>
-									<th>Edit</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
+						<div class="table-responsive">
+							<table id="user_data" class="ui celled table" style="width:100%">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Nama</th>
+										<th>Level</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
 
-						</table>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -191,7 +193,7 @@ require_once('template/header.php');
 		$(document).on('click', '.update', function(){
 			var user_id = $(this).attr("id");
 			$.ajax({
-				url:"model/fetch_single.php",
+				url:"model_member/fetch_single.php",
 				method:"POST",
 				data:{user_id:user_id},
 				dataType:"json",

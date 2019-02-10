@@ -15,8 +15,8 @@ $data = $prof->getProfile($id);
 if(isset($_POST['update'])){
   $idmember = htmlspecialchars($_SESSION['IdMember']);
   $nama     = htmlspecialchars($_POST['nama']);
-  $jurusan  = htmlspecialchars($_POST['jurusan']);
-  $kelas    = htmlspecialchars($_POST['kelas']);
+  $jurusan  = $_POST['jurusan'];
+  $kelas    = $_POST['kelas'];
   $NoTlp    = htmlspecialchars($_POST['NoTlp']);
   $alamat   = htmlspecialchars($_POST['alamat']);
   $email    = htmlspecialchars($_POST['email']);
@@ -191,12 +191,12 @@ if(isset($msg))
           <tr>
             <td>Kelas</td>
             <td>:</td>
-            <td><input disabled="disabled" class="form-control" type="text" name="kelas" value="<?php echo $data['Kelas'];?>"></td>
+            <td><input hidden="hidden" class="form-control" type="text" name="kelas" value="<?php echo $data['Kelas'];?>"></td>
           </tr>
           <tr>
             <td>Jurusan</td>
             <td>:</td>
-            <td><input disabled="disabled" class="form-control" type="text" name="jurusan" value="<?php echo $data['Jurusan'];?>"></td>
+            <td><input hidden="hidden"  class="form-control" type="text" name="jurusan" value="<?php echo $data['Jurusan'];?>"></td>
           </tr>
           <tr>
             <td>No Telepon</td>

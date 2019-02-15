@@ -21,6 +21,11 @@ if(isset($_POST["operation"]))
 		);
 		if(!empty($result))
 		{
+			$stmt = $connection->prepare("INSERT INTO soal_status (IdMapel,Nama,status,Kelas) VALUES (:IdMapel,:Nama,:status,:Kelas) ");
+			$stmt->bindParam(":IdMapel", htmlspecialchars($_POST['Id']));
+			$stmt->bindParam(":Nama", htmlspecialchars($_POST['NamaMapel']));
+			$stmt->bindParam(":status","t");
+			$stmt->bindParam(":Kelas",htmlspecialchars($_POST['Kelas']));
 			echo 'Data Inserted';
 		}
 	}

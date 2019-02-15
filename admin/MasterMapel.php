@@ -26,6 +26,11 @@ require_once('template/header.php');
 			<i class="fa fa-book"></i> <span>Master Mapel</span>
 		</a>
 	</li>
+	<li class="">
+		<a href="MasterSoal.php">
+			<i class="fa fa-user"></i> <span>Master Soal</span>
+		</a>
+	</li>
 	<li class="header">SETTING</li>
 	<li>
 		<a href="../logout.php">

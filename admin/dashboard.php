@@ -2,7 +2,7 @@
 session_start();
 if($_SESSION['Level'] != '3'){
 
-	header('location:index.php');
+	header('location:../index.php');
 
 }
 
@@ -24,6 +24,11 @@ require_once('template/header.php');
 	<li class="">
 		<a href="MasterMapel.php">
 			<i class="fa fa-book"></i> <span>Master Mapel</span>
+		</a>
+	</li>
+	<li class="">
+		<a href="MasterSoal.php">
+			<i class="fa fa-book"></i> <span>Master Soal</span>
 		</a>
 	</li>
 	<li class="header">SETTING</li>
